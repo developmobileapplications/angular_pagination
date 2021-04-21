@@ -1,0 +1,11 @@
+<p>pagination works!</p>
+
+
+<div>
+    <ul *ngFor="let item of data | paginate: { itemsPerPage: 8, currentPage: cp }" class="listMargin">
+        {{item.itemName}}
+    </ul>
+
+    <pagination-controls (pageChange)="cp = $event"></pagination-controls>
+
+</div>
